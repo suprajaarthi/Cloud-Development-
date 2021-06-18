@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+
+  <title>Simple Interest Calculator</title>
+  <br>
+    <b><strong> <h1 style="font-weight:800;text-align : center;color:#000080;font-size:36px;margin-right:70px">Simple Interest Calculator</h1><br><br>
+</b></strong>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+</head>
+<body>
+
+
+<script>
+function myFn()
+{
+    var x = document.getElementById("amt").value;
+    var y = document.getElementById("rate").value;
+    var z = document.getElementById("year").value;
+    var res = (x*y*z)/100;
+    document.getElementById('op').innerHTML="If you deposit "+x+" at an interest rate of "+y
+    +" You will recieve an amount of "+res+" in "+z+" years";
+
+}
+
+function docWrite(variable) {
+    document.write(variable);
+}
+
+function updateTextInput(val) {
+          document.getElementById('textInput').innerHTML=val+"%"; 
+        }
+
+</script>
+
+<style>
+h1{
+    font-family: 'Merriweather', serif;
+}
+ #cen{
+ 
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+
+
+
+}
+</style>
+ 
+  <div class="container">
+  <div class="row">
+    <div class="col-sm-3">
+
+    </div>
+    <div class="col-sm-5" style=" box-shadow: 10px 10px black; border: 2px solid black;border-radius: 50px 20px ">
+    <br> <br> <br>
+    <div id="cen">
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; Amount 
+     <input required="required" value="0" id="amt" type="number" >
+    <br><br>
+   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; Interest rate  
+    <input required="required" id="rate" type="range"  min="0.1" max="10.1" value="5.0"  style="width:176px;" onchange="updateTextInput(this.value);"> 
+    <p style="margin-right:45px" id="textInput" value="">5.0%</p>
+    
+    &nbsp; &nbsp; &nbsp; &nbsp;Number of years  <input  required="required" id="year" type="number" min="0">
+     <br><br><br>
+    &nbsp; &nbsp; <button type="button" class="btn btn-primary" onclick="myFn()">Compute Interest</button>
+<br> <br>
+<p style="text-align:center;font-size:14px" id="op"></p>
+    </div>
+    </div>
+    <div class="col-sm-4" >
+     
+    </div>
+    
+  </div>  
+</div>
+
+
+
+<style>
+body
+{
+
+  background: #c9d6ff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #c9d6ff, #e2e2e2); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #c9d6ff, #e2e2e2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+	h1,h3,p,h5,button{
+		text-align: center;
+		{# font-size: 20px; #}
+	}
+</style>
+
+<br>
+
+</body>
+</html>
