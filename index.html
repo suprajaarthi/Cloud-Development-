@@ -2,11 +2,14 @@
 <html lang="en">
 <head>
 <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500&family=Mate+SC&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
 
-  <title>Simple Interest Calculator</title>
-  <br>
-    <b><strong> <h1 style="font-weight:800;text-align : center;color:#000080;font-size:36px;margin-right:70px">Simple Interest Calculator</h1><br><br>
+  <title>WebApp - Simple Interest Calculator</title>
+  <br><br>
+    <b><strong> <h1 style="font-weight:800;text-align : center;  color:#00008B;   font-size:36px;margin-right:70px">Simple Interest Calculator</h1><br><br>
 </b></strong>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,8 +30,17 @@ function myFn()
     var y = document.getElementById("rate").value;
     var z = document.getElementById("year").value;
     var res = (x*y*z)/100;
-    document.getElementById('op').innerHTML="If you deposit "+x+" at an interest rate of "+y
-    +" You will recieve an amount of "+res+" in "+z+" years";
+    document.getElementById('op').innerHTML="If you deposit "+x.fontcolor("yellow")+" at an interest rate of "+y.fontcolor("yellow")
+    +" You will recieve an amount of "+ res +" in "+z.fontcolor("yellow")+ " years";
+    if( document.getElementById('amt').value <=0)
+    {
+      alert("Please enter a positive number as amount");
+
+    }
+    if( document.getElementById('year').value <=0)
+    {
+      alert("Please enter a positive number as year");
+    }
 
 }
 
@@ -43,7 +55,7 @@ function updateTextInput(val) {
 </script>
 
 <style>
-h1{
+h1,p{
     font-family: 'Merriweather', serif;
 }
  #cen{
@@ -64,20 +76,20 @@ h1{
 
     </div>
     <div class="col-sm-5" style=" box-shadow: 10px 10px black; border: 2px solid black;border-radius: 50px 20px ">
-    <br> <br> <br>
+    <br>
     <div id="cen">
-    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; Amount 
-     <input required="required" value="0" id="amt" type="number" >
-    <br><br>
-   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; Interest rate  
-    <input required="required" id="rate" type="range"  min="0.1" max="10.1" value="5.0"  style="width:176px;" onchange="updateTextInput(this.value);"> 
-    <p style="margin-right:45px" id="textInput" value="">5.0%</p>
-    
-    &nbsp; &nbsp; &nbsp; &nbsp;Number of years  <input  required="required" id="year" type="number" min="0">
+   <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; Amount </p>
+     <input required="required" value="1000" id="amt" type="number" >
+    <br><br><br>
+  <p> &nbsp; &nbsp; &nbsp; &nbsp;  Interest rate  </p>
+    <input required="required" id="rate" type="range"  min="1" max="20" value="10"  style="width:176px;" onchange="updateTextInput(this.value);"> 
+    <p style="margin-right:45px;text-align: center;" id="textInput" value="">10%</p>
+    <br>
+    <p>&nbsp; &nbsp; &nbsp;Number of years </p> <input value="10"  required="required" id="year" type="number" >
      <br><br><br>
     &nbsp; &nbsp; <button type="button" class="btn btn-primary" onclick="myFn()">Compute Interest</button>
 <br> <br>
-<p style="text-align:center;font-size:14px" id="op"></p>
+<b><strong><p style="text-align:center;font-size:15px" id="op"></p></b></strong>
     </div>
     </div>
     <div class="col-sm-4" >
@@ -86,22 +98,27 @@ h1{
     
   </div>  
 </div>
-
-
+<br><br>
+<h5 style="margin-right:70px; color:#00008B ">Ⓒ Everyone Can Get Rich </h5>
 
 <style>
 body
 {
 
-  background: #c9d6ff; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #c9d6ff, #e2e2e2); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #c9d6ff, #e2e2e2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #b2fefa; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #b2fefa, #0ed2f7); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #b2fefa, #0ed2f7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
-	h1,h3,p,h5,button{
+	h1,h3,h5,button{
 		text-align: center;
-		{# font-size: 20px; #}
+
 	}
+
+  p,h5
+  {
+   font-family: 'Josefin Sans', sans-serif;
+  }
 </style>
 
 <br>
