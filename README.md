@@ -4,7 +4,7 @@
 
 ![Storage services](https://user-images.githubusercontent.com/51900501/126337372-213f08a4-a116-44a3-aed9-53e2d7210721.png)
 ![Compute services](https://user-images.githubusercontent.com/51900501/126337381-cf21b7eb-809c-4174-a7cc-d7172c27782c.png)
-![Data services](https://user-images.githubusercontent.com/51900501/126337649-2b41c964-6687-490f-b8d9-f45ac9dc5563.png)
+![Data ](https://user-images.githubusercontent.com/51900501/126337960-a96b1946-5370-4b8d-b2b5-eceeabffee77.png)
 
 
 Basic Cloud Development with HTML CSS and JS 
