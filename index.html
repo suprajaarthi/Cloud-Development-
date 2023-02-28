@@ -30,8 +30,8 @@ function myFn()
     var y = document.getElementById("rate").value;
     var z = document.getElementById("year").value;
     var res = (x*y*z)/100;
-    document.getElementById('op').innerHTML="If you deposit "+x+" at an interest rate of "+y
-    +" You will recieve an amount of "+ res +" in "+z+ " years";
+    document.getElementById('op').innerHTML="If you deposit "+x.fontcolor("yellow")+" at an interest rate of "+y.fontcolor("yellow")
+    +" You will recieve an amount of "+ res +" in "+z.fontcolor("yellow")+ " years";
     if( document.getElementById('amt').value <=0)
     {
       alert("Please enter a positive number as amount");
