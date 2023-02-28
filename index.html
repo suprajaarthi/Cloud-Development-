@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
 
-  <title>Simple Interest Calculator</title>
+  <title>SI Calculator</title>
   <br><br>
     <b><strong> <h1 style="font-weight:800;text-align : center;  color:#00008B;   font-size:36px;margin-right:70px">Simple Interest Calculator</h1><br><br>
 </b></strong>
@@ -30,8 +30,8 @@ function myFn()
     var y = document.getElementById("rate").value;
     var z = document.getElementById("year").value;
     var res = (x*y*z)/100;
-    document.getElementById('op').innerHTML="If you deposit "+x.fontcolor("green")+" at an interest rate of "+y.fontcolor("green")
-    +" You will recieve an amount of "+ res +" in "+z.fontcolor("red")+ " years";
+    document.getElementById('op').innerHTML="If you deposit "+x.fontcolor("lawngreen")+" at an interest rate of "+y.fontcolor("green")
+    +" You will recieve an amount of "+ res.fontcolor("red") +" in "+z.fontcolor("red")+ " years";
     if( document.getElementById('amt').value <=0)
     {
       alert("Please enter a positive number as amount");
